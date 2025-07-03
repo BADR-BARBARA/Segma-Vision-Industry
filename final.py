@@ -46,8 +46,8 @@ SPEECH_MODEL_ID = "openai/whisper-base"
 OLLAMA_API_URL = "http://localhost:11434/api/generate"
 OLLAMA_MODEL_NAME = "gemma3:1b" # IMPORTANT: VERIFY this tag against `ollama list`
 # This path is the DEFAULT model. The active model can be changed by the user.
-YOLO_WORLD_CHECKPOINT_PATH_INFERENCE = r"C:/Users/HP/Desktop/projet_metier/yolov8l-world.pt" 
-SAM_CHECKPOINT_PATH = r"C:/Users/HP/Desktop/projet_metier/sam_vit_h_4b8939.pth"
+YOLO_WORLD_CHECKPOINT_PATH_INFERENCE = r"C:/Users/HP/Desktop/Segma-Vision-Industry/yolov8l-world.pt" 
+SAM_CHECKPOINT_PATH = r"C:/Users/HP/Desktop/Segma-Vision-Industry/sam_vit_h_4b8939.pth"
 SAM_ENCODER_VERSION = "vit_h"
 
 # --- App 2: Fine-Tuning Configurations ---
