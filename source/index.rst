@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-SEGMA-VISION-INDUSTRY documentation
+SEGMA-VISION-INDUSTRY documentation:
 ===================================
 
 Add your content using ``reStructuredText`` syntax. See the
