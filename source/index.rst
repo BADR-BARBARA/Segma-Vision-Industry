@@ -62,7 +62,7 @@ Open your terminal and clone the project from GitHub.
 
 .. code-block:: bash
 
-   git clone <YOUR_GITHUB_REPOSITORY_URL>
+   git clone https://github.com/BADR-BARBARA/Segma-Vision-Industry.git
    cd SEGMA-VISION-INDUSTRY # Or your project's folder name
 
 Step 2: Create a Python Environment
