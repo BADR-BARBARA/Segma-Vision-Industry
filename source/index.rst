@@ -1,9 +1,9 @@
-==========================================================
-Segma Vision Pro: Voice-Activated Detection & Fine-Tuning
-==========================================================
+=========================================================
+SEGMA-VISION-INDUSTRY: Voice-Activated Object Detection
+=========================================================
 
 .. note::
-   Welcome to the official documentation for the Segma Vision Pro project. This application combines the power of large language models and vision models to provide a seamless, voice-activated object detection and segmentation experience, complete with an integrated fine-tuning pipeline.
+   Welcome to the official documentation for **SEGMA-VISION-INDUSTRY**. This application leverages state-of-the-art AI to provide a seamless, voice-activated object detection and segmentation experience.
 
 .. toctree::
    :maxdepth: 2
@@ -17,20 +17,19 @@ Segma Vision Pro: Voice-Activated Detection & Fine-Tuning
 Overview
 ========
 
-Segma Vision Pro is a Streamlit-based web application designed for two primary purposes:
+**SEGMA-VISION-INDUSTRY** is an advanced Streamlit web application that revolutionizes object detection by enabling users to command the system with their voice. It listens to your instructions, identifies the objects you want to find, and then performs real-time detection and segmentation on a live video stream using powerful vision models like YOLO-World and SAM.
 
-1.  **Live Voice-Activated Detection**: Use your voice to tell the application what objects to find. The app transcribes your speech, extracts object classes, and then uses state-of-the-art models (YOLO-World and SAM) to detect and segment those objects in a live webcam feed in real-time.
-2.  **YOLO-World Model Fine-Tuning**: A user-friendly, step-by-step interface to fine-tune a YOLO-World model on your own custom dataset. You can perform the training locally on your machine or generate a portable Python script for training on cloud platforms like Google Colab or Kaggle.
+In addition to its core detection capabilities, the application includes a powerful, integrated feature for **fine-tuning** the underlying vision model on custom datasets. This allows for the creation of specialized models for highly accurate, domain-specific object recognition, all through a user-friendly interface.
 
 Key Features
 ------------
 
 *   **Voice-Powered**: Simply speak the names of objects you want to detect.
 *   **Real-Time Performance**: Live detection and segmentation on a webcam feed.
-*   **Zero-Shot Detection**: Uses YOLO-World for open-vocabulary detection even without specific classes.
+*   **Zero-Shot Detection**: Uses YOLO-World for open-vocabulary detection, finding objects even without pre-defined classes.
 *   **High-Quality Segmentation**: Integrates the Segment Anything Model (SAM) for precise instance masks.
-*   **Integrated Fine-Tuning**: No need for complex scripts. Fine-tune a model directly through the UI.
-*   **Flexible Training**: Supports both local (CPU/GPU) training and generation of cloud-ready scripts.
+*   **Integrated Model Fine-Tuning**: A key feature allowing you to train a specialized model on your own data directly through the UI.
+*   **Flexible Training**: Supports both local (CPU/GPU) training and the generation of cloud-ready scripts (for Kaggle/Colab).
 *   **Interactive UI**: Built with Streamlit for an intuitive user experience.
 
 Installation and Setup
@@ -64,7 +63,7 @@ Open your terminal and clone the project from GitHub.
 .. code-block:: bash
 
    git clone <YOUR_GITHUB_REPOSITORY_URL>
-   cd <YOUR_PROJECT_FOLDER>
+   cd SEGMA-VISION-INDUSTRY # Or your project's folder name
 
 Step 2: Create a Python Environment
 -----------------------------------
@@ -126,10 +125,10 @@ Your web browser should automatically open with the application interface.
 User Guide
 ==========
 
-The application has two main pages, selectable from the sidebar: "Live Detection" and "Model Fine-tuning".
+The application interface is navigated using the sidebar. The primary function is "Live Detection," with "Model Fine-tuning" available as a powerful tool to enhance the system's capabilities.
 
-Part 1: Live Detection
-----------------------
+Live Detection (Core Workflow)
+------------------------------
 
 This is the main screen for real-time, voice-activated object detection.
 
@@ -153,16 +152,17 @@ This is the main screen for real-time, voice-activated object detection.
 
 **4. Using a Fine-Tuned Model:**
 
-*   If you have trained a custom model using the fine-tuning page, you can activate it for detection. After a successful training run, the "Live Detection" page will show which model is active.
+*   If you have trained a custom model using the fine-tuning feature, you can activate it for detection. The sidebar will indicate which model is currently active.
 *   You can reset to the default YOLO-World model at any time from the sidebar.
 
-Part 2: Model Fine-Tuning
--------------------------
+Feature: Custom Model Fine-Tuning
+---------------------------------
 
-This page provides a guided workflow for fine-tuning a YOLO-World model on a custom dataset.
+This page provides a guided workflow for fine-tuning the YOLO-World model on a custom dataset.
 
 **Step 1: Upload Your Dataset**
 
+*   Navigate to the "Model Fine-tuning" page from the sidebar.
 *   Your dataset must be in a **ZIP file** with a specific folder structure (the standard YOLOv5/v8 format).
 
     .. code-block:: text
@@ -210,7 +210,7 @@ You have two options for training:
     *   The script will appear on the screen. **You must edit one line** in the script to point to your dataset's path within the cloud environment.
     *   Download the script and upload it along with your dataset to your chosen cloud platform.
 
-**Step 4: View Results**
+**Step 4: View and Use Your New Model**
 
 *   After local training is complete, the results page will appear.
 *   It will show the path to your best-trained model (``best.pt``).
@@ -220,7 +220,7 @@ You have two options for training:
 
 **Resetting the Fine-Tuning Process**
 
-*   At any point, you can click the **Full Finetuning Reset** button in the sidebar to clear all data and start over from Step 1.
+*   At any point, you can click the **Full Finetuning Reset** button in the sidebar to clear all data and start the process over.
 
 Configuration Reference
 =======================
